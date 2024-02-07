@@ -1,0 +1,79 @@
+# dependencies
+/node_modules
+
+# environment variables
+.env
+
+# editor files
+.vscode
+.idea
+*.suo
+*.ntvsync
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# build and compile files
+*.log
+*.out
+*.exe
+*.dll
+*.exp
+*.manifest
+*.syso
+*.class
+*.psd
+*.orig
+*.rej
+*.bak
+*.tmp
+*.o
+*.lo
+*.la
+*.al
+*.br
+*.rbc
+*.swo
+*.swp
+*.rdb
+*.d
+*.b
+*.a
+*.y
+*.pyc
+*.pyo
+*.obj
+*.elf
+*.hex
+*.ds
+*.map
+*.exp
+*.ko
+*.so
+
+# log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+lerna-debug.log
+
+# OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IntelliJ IDEA files
+.idea
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text files
+.sublime-workspace
+*.sublime-project
+
+.nodemon.json
+
+# VS Code files
+.vscode
