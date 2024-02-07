@@ -3,9 +3,9 @@ const geoip = require("geoip-lite2");
 const app = express();
 const port = 3001;
 
-const blockedCountries = ["China", "North Korea","BD"];
+const blockedCountries = ["China", "North Korea"];
 app.set("trust proxy", true);
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   const ip = "37.111.247.249";
   // const ip = req.ip;
   console.log(ip);
