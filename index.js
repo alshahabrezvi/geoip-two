@@ -6,8 +6,8 @@ const port = 3001;
 const blockedCountries = ["China", "North Korea"];
 app.set("trust proxy", true);
 app.post("/", (req, res) => {
-  const ip = "37.111.247.249";
-  // const ip = req.ip;
+  // const ip = "37.111.247.249";
+  const ip = req.ip;
   console.log(ip);
   const geo = geoip.lookup(ip);
   console.log(geo);
