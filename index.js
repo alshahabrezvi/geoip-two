@@ -1,14 +1,18 @@
 const express = require("express");
 const geoip = require("geoip-lite2");
 const app = express();
+var cors = require('cors')
 const port = 3001;
-
-const blockedCountries = ["China", "North Korea"];
+app.use(express.json());
+app.use(cors())
 app.set("trust proxy", true);
 app.post("/", (req, res) => {
+  const blockedCountries = ["China", "North Korea"];
   // const ip = "37.111.247.249";
-  const ip = req.ip;
-  console.log(ip);
+  const ip = req.body.ip;
+
+  console.log(ip)
+  
   const geo = geoip.lookup(ip);
   console.log(geo);
   if (geo) {
@@ -23,6 +27,10 @@ app.post("/", (req, res) => {
     res.send("Hello World! Unable to get your IP address and country.");
   }
 });
+
+
+
+
 
 // res.send("hi");
 
