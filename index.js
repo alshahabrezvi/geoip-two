@@ -7,9 +7,9 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 app.set("trust proxy", true);
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   // const ip = "97.111.247.249";
-  const ip = req.ip;
+  const ip = req.body;
   console.log(ip);
 
   const geo = geoip.lookup(ip);
