@@ -2,14 +2,16 @@ const express = require("express");
 const geoip = require("geoip-lite2");
 const app = express();
 var cors = require("cors");
-const port = 3001;
+require("dotenv").config();
+const port = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 app.set("trust proxy", true);
-app.post("/", (req, res) => {
-  // const ip = "37.111.247.249";
-  const ip = req.body.ip;
+app.get("/", (req, res) => {
+  // const ip = "97.111.247.249";
+  const ip = req.ip;
   console.log(ip);
+
   const geo = geoip.lookup(ip);
   console.log(geo);
   if (geo) {
